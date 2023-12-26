@@ -2,32 +2,23 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<link rel="stylesheet"
+          href="style.css">
 		<title>Fridge</title>
 		<style>
 			body { margin: 0; }
 		</style>
 	</head>
 	<body>
-		 <script type="module" src="./index.js"></script>
-
-		<!--Example QR scanning code found on the internet-->
-		<div id="container">
-    			<h1>QR Code Scanner</h1>
-
-    			<a id="btn-scan-qr">
-        			<img src="https://uploads.sitepoint.com/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-    			<a/>
-
-    			<canvas hidden="" id="qr-canvas"></canvas>
-
-    			<div id="qr-result" hidden="">
-        			<b>Data:</b> <span id="outputData"></span>
-    			</div>
+		<div class="container">
+			<h1>Scan QR Codes</h1>
+			<div class="section">
+				<div id = "my-qr-reader"></div>
+			</div>
 		</div>
-
-<script src="./qrCodeScanner.js"></script>
-<script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+		<script src="https://unpkg.com/html5-qrcode"></script>
+		 <script type="module" src="./index.js"></script>
 
 		
 	</body>
