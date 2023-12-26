@@ -19,5 +19,5 @@ fs.writeFile("data.json", data, (error) => {
     }
 });
 
-import data from './data.json' assert { type: 'json' };
-console.log(data);
+import filedata from './data.json' assert { type: 'json' };
+console.log(filedata);
