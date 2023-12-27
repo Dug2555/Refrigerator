@@ -16,6 +16,9 @@
 		<div>
 			<label id="scannedTextMemo">None scanned</label>
 		</div>
+		<div>
+			<label id="cameras">None found</label>
+		</div>
 		<script type="text/javascript" src="./js/jsqrscanner.nocache.js"></script>
 		<script type="text/javascript">
 			function onQRCodeScanned(scannedText)
@@ -41,6 +44,14 @@
 					
 					return Promise.resolve(exCameras);
 				}).then(function(ids){
+
+					var numCameras = document.getElementById("cameras");
+					if(numCameras)
+					{
+						numCameras.value = ids.length.toString();
+					}
+
+
 					if(ids.length === 0)
 					{
 					  return Promise.reject('Could not find a webcam');
