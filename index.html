@@ -30,6 +30,21 @@
 				}
 			}
 			
+			function provideVideo(){
+				var n = navigator;
+
+				if(n.mediaDevices && n.mediaDevices.getUserMedia){
+					return n.mediaDevices.getUserMedia({
+						video: {
+							facingMode: "enviroment"
+						},
+						audio:false
+					});
+				}
+
+				return Promise.reject("Your browser doesn't support getUserMedia")
+			}
+
 			//funtion returning a promise with a video stream
 			function provideVideoQQ()
 			{
@@ -60,7 +75,7 @@
 					return navigator.mediaDevices.getUserMedia({
 						video: {
 						  'optional': [{
-							'sourceId': ids.length === 1 ? ids[0] : ids[2]//this way QQ browser opens the rear camera
+							'sourceId': ids.length === 1 ? ids[0] : ids[1]//this way QQ browser opens the rear camera
 							}]
 						}
 					});        
