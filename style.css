@@ -26,6 +26,13 @@ body {
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25); 
 } 
   
+#startButton {
+    background-color: antiquewhite;
+    border: #000000;
+    text-align: center;
+    font-size: 15px;
+}
+
 button { 
     padding: 10px 20px; 
     border: 1px solid #b2b2b2; 
