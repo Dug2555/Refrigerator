@@ -27,8 +27,9 @@ body {
 } 
   
 #startButton {
+    padding: 10px 20px;
     background-color: antiquewhite;
-    border: #000000;
+    border: 5px #000000;
     text-align: center;
     font-size: 15px;
 }
