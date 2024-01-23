@@ -36,6 +36,8 @@
 		
 			  <label>Result:</label>
 			  <pre><code id="result"></code></pre>
+			  <label>product:</label>
+			  <pre><code id="product"></code></pre>
 		
 
 			</section>
@@ -91,6 +93,7 @@
 						})
 						.then((data) =>
 								console.log(data))
+								document.getElementById('product').textContent = data.product_name
 						.catch((error) =>
 										console.error("Unable to fetch data:", error));
 
