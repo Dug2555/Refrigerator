@@ -80,6 +80,20 @@
 					  if (result) {
 						console.log(result)
 						document.getElementById('result').textContent = result.text
+
+						fetch("https://world.openfoodfacts.org/api/v2/product/" + result.text + ".json")
+						.then((res) =>{
+							if(!res.ok) {
+								throw new Error
+									('HTTP error! Status: ${res.status}');
+							}
+							return res.json();
+						})
+						.then((data) =>
+								console.log(data))
+						.catch((error) =>
+										console.error("Unable to fetch data:", error));
+
 					  }
 					  if (err && !(err instanceof ZXing.NotFoundException)) {
 						console.error(err)
